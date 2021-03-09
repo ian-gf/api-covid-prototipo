@@ -1,7 +1,8 @@
 const { Router } = require('express');
 const router = Router();
-//const express = require(express);
-//const router = express.Router();
+
+const juegos = require('./data.json');
+console.log(juegos);
 
 //Rutas de práctica
 router.get('/', (req, res) => {
@@ -14,6 +15,46 @@ router.get('/json', (req, res) => {
 
 router.get('/home', (req, res) => {
     res.send('Estas en home');
+});
+
+router.get('/json2', (req, res) => {
+    const data = {
+        "name":"John Doe",
+        "id": "1234"
+    }
+    res.json(data);
+});
+
+router.get('/json3', (req, res) => {
+    res.json(juegos);
+});
+
+router.get('/:id', (req, res) => {
+    const {id} = req.params;
+    juegos.forEach(juego => {
+        if(juego.id == id){
+            res.json(juego);
+            console.log(juego.title);
+        }
+    });
+
+
+    console.log(id);
+})
+
+router.post('/json3', (req, res) => {
+    const {title, version, genre} = req.body;
+    if(title && version && genre) {
+        const id = juegos.length +1;
+        const nuevoJuego = {...req.body, id};
+        juegos.push(nuevoJuego);
+        //console.log(nuevoJuego);
+        res.status(200).json(juegos);
+    }else
+    {
+        res.status(500).json({error:'no data'});
+    }
+
 });
 
 //RUTAS PRINCIPALES
@@ -91,8 +132,15 @@ router.get('/api/registros/locacion/nombre', (req, res) => {
 });
 
 //RUTAS TÉCNICAS
-router.get('/api/registros/id', (req, res) => {
-    res.send('Registros de API -> Elegido por ID');
+router.get('/api/registros/:id', (req, res) => {
+    //res.send('Registros de API -> Elegido por ID');
+    const {id} = req.params;
+    juegos.forEach(juego => {
+        if(juego.id == id){
+            res.json(juego);
+            console.log(juego.title);
+        }
+    });
 });
 
 module.exports = router;
