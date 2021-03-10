@@ -1,14 +1,54 @@
 [
+
     {
         "id":"1",
-        "title":"the legend of zelda",
-        "version":"ocarina of time",
-        "genre":"adventure"
+        "nombre":"Alfonso Cervantes Coronado",
+        "sexo":"Masculino",
+        "edades":"21",
+        "ciudad":"Mexicali",
+        "locacion":"Toscana"
     },
     {
         "id":"2",
-        "title":"Mario Bros",
-        "version":"Mario Kart",
-        "genre":"racing"
+        "nombre":"Ian Gerardo Fuentes",
+        "sexo":"Masculino",
+        "edades":"20",
+        "ciudad":"Mexicali",
+        "locacion":"Casa Amaya"
+    },
+    {
+        "id":"3",
+        "nombre":"Arturo Durazo Simo",
+        "sexo":"Masculino",
+        "edades":"25",
+        "ciudad":"Mexicali",
+        "locacion":"San Agustin"
+    },
+    {
+        "id":"4",
+        "nombre":"Carlos Ortega Sanchez",
+        "sexo":"Masculino",
+        "edades":"36",
+        "ciudad":"Ensanada",
+        "locacion":"Abasolo"
+    },
+    {
+        "id":"5",
+        "nombre":"Ariadna Gomez Lopez",
+        "sexo":"Femenino",
+        "edades":"26",
+        "ciudad":"Tijuana",
+        "locacion":"Los Arboles"
+    },
+    {
+        "id":"6",
+        "nombre":"Lizbeth Tapia Carrillo",
+        "sexo":"Femenino",
+        "edades":"47",
+        "ciudad":"Guadalajara",
+        "locacion":"La perla"
     }
+   
+
+
 ]
