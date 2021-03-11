@@ -16,4 +16,4 @@ app.use(require('./routes/admin'));
 
 //Empezando el servidor
 app.listen(app.get('port'));
-console.log("mi primer servidor");
+console.log("El servidor está corriendo!");
