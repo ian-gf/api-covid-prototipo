@@ -81,7 +81,8 @@ router.post('/api/alta', (req, res) => {
         personas.push(nuevaPersona);
         //console.log(nuevaPersona);
         res.status(200).json(personas);
-    }else
+    }
+    else
     {
         res.status(500).json({error:'Introduzca una persona con todos los datos.'});
     }
@@ -94,42 +95,55 @@ router.get('/api/registros', (req, res) => {
 
 router.get('/api/registros/ciudad/:ciudad', (req, res) => {
     const {ciudad} = req.params;
+    let arrpersonas = [];
+
     personas.forEach(persona => {
-        if(persona.ciudad == ciudad){
-            res.json(persona);
-            console.log(persona.title);
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase()){
+            arrpersonas.push(persona);
+            //console.log(persona.title);
         }
+
     });
+
+    res.json(arrpersonas);
 });
 
 router.get('/api/registros/nombre/:nombre', (req, res) => {
     const {nombre} = req.params;
+    let arrpersonas = [];
+
     personas.forEach(persona => {
-        if(persona.nombre == nombre){
-            res.json(persona);
-            console.log(persona.title);
+        if(persona.nombre.toLowerCase() == nombre.toLowerCase()){
+            arrpersonas.push(persona);
+            //console.log(persona.title);
         }
     });
+
+    res.json(arrpersonas);
 });
 
 router.get('/api/registros/sexo/:sexo', (req, res) => {
     const {sexo} = req.params;
+    let arrpersonas = [];
+
     personas.forEach(persona => {
-        if(persona.sexo == sexo){
-            res.json(persona);
-            console.log(persona.sexo);
+        if(persona.sexo.toLowerCase() == sexo.toLowerCase()){
+            arrpersonas.push(persona);
+            //console.log(persona.sexo);
         }
     });
+
+    res.json(arrpersonas);
 });
 
 router.get('/api/registros/edades/:edades', (req, res) => {
     const {edades} = req.params;
-    let arrpersonas = [''];
+    let arrpersonas = [];
 
     personas.forEach(persona => {
         if(persona.edades == edades){
-            res.json(persona);
-            console.log(persona.nombre);
+            arrpersonas.push(persona);
+            //console.log(persona.nombre);
         }
     });
 
@@ -137,52 +151,170 @@ router.get('/api/registros/edades/:edades', (req, res) => {
 });
 
 router.get('/api/registros/:locacion', (req, res) => {
-    res.send('Registros de API -> Locación');
+    const {locacion} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.locacion.toLowerCase() == locacion.toLowerCase()){
+            arrpersonas.push(persona);
+            //console.log(persona.nombre);
+        }
+    });
 });
 
 //RUTAS FILTRADAS
-router.get('/api/registros/:ciudad/:nombre', (req, res) => {
-    res.send('Registros de API -> Filtrada por ciudad y nombre');
+router.get('/api/registros/filtros/cn/:ciudad/:nombre', (req, res) => {
+    const {ciudad, nombre} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase())
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:ciudad/:sexo', (req, res) => {
-    res.send('Registros de API -> Filtrada por ciudad y sexo');
+router.get('/api/registros/filtros/cs/:ciudad/:sexo', (req, res) => {
+    const {ciudad, sexo} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase())
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:ciudad/:edades', (req, res) => {
-    res.send('Registros de API -> Filtrada por ciudad y edades');
+router.get('/api/registros/filtros/ce/:ciudad/:edades', (req, res) => {
+    const {ciudad, edades} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.edades == edades);
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:ciudad/:locacion/:nombre', (req, res) => {
-    res.send('Registros de API -> Filtrada por ciudad, locacion y nombre');
+router.get('/api/registros/filtros/cln/:ciudad/:locacion/:nombre', (req, res) => {
+    const {ciudad, locacion, nombre} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:ciudad/:locacion/:edades', (req, res) => {
-    res.send('Registros de API -> Filtrada por ciudad, locacion y edades');
+router.get('/api/registros/filtros/cle/:ciudad/:locacion/:edades', (req, res) => {
+    const {ciudad, locacion, nombre} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:ciudad/:sexo/:nombre', (req, res) => {
-    res.send('Registros de API -> Filtrada por ciudad, sexo y nombre');
+router.get('/api/registros/filtros/csn/:ciudad/:sexo/:nombre', (req, res) => {
+    const {ciudad, sexo, nombre} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:ciudad/:sexo/:edades', (req, res) => {
-    res.send('Registros de API -> Filtrada por ciudad, sexo y edades');
+router.get('/api/registros/filtros/cse/:ciudad/:sexo/:edades', (req, res) => {
+    const {ciudad, locacion, nombre} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.edades.toLowerCase() == sexo.toLowerCase() && persona.edades == edades);
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:ciudad/:sexo/:edades/:nombre', (req, res) => {
-    res.send('Registros de API -> Filtrada por ciudad, sexo, edades y nombre');
+router.get('/api/registros/filtros/csen/:ciudad/:sexo/:edades/:nombre', (req, res) => {
+    const {ciudad, locacion, nombre} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:locacion/:edades', (req, res) => {
-    res.send('Registros de API -> Filtrada por locacion y edades');
+router.get('/api/registros/filtros/le/:locacion/:edades', (req, res) => {
+    const {locacion, edades} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.edades == edades);
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:locacion/:sexo', (req, res) => {
-    res.send('Registros de API -> Filtrada por locacion y sexo');
+router.get('/api/registros/filtros/ls/:locacion/:sexo', (req, res) => {
+    const {locacion, sexo} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase());
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:locacion/:nombre', (req, res) => {
-    res.send('Registros de API -> Filtrada por locacion y edades');
+router.get('/api/registros/filtros/ln/:locacion/:nombre', (req, res) => {
+    const {locacion, nombre} = req.params;
+    let arrpersonas = [];
+
+    personas.forEach(persona => {
+        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        {
+            arrpersonas.push(persona);
+        }
+    });
+
+    res.json(arrpersonas);
 });
 
 
