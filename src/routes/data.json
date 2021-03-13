@@ -2,7 +2,7 @@
 
     {
         "id":"1",
-        "nombre":"Alfonso Cervantes Coronado",
+        "nombre":"Alfonso Cervantes Fuentes",
         "sexo":"Masculino",
         "edades":"21",
         "ciudad":"Mexicali",
@@ -10,7 +10,7 @@
     },
     {
         "id":"2",
-        "nombre":"Ian Gerardo Fuentes",
+        "nombre":"Ian Gerardo Coronado",
         "sexo":"Masculino",
         "edades":"20",
         "ciudad":"Mexicali",

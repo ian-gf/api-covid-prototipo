@@ -1,36 +1,16 @@
 const { Router } = require('express');
 const router = Router();
 
-//const juegos = require('./data.json');
-//console.log(juegos);
-
 const personas = require('./data.json');
-//console.log(personas);
 
 //Rutas de práctica
 router.get('/', (req, res) => {
     res.send('REGISTROS DE PERSONAS COVID 19 - Página principal');
 });
 
-//router.get('/json', (req, res) => {
-//    res.json({"name":"John Doe"})
-//});
-
 router.get('/home', (req, res) => {
     res.send('Estas en home');
 });
-
-//router.get('/json2', (req, res) => {
-//    const data = {
-//        "name":"John Doe",
-//        "id": "1234"
-//    }
-//    res.json(data);
-//});
-
-//router.get('/json3', (req, res) => {
-//    res.json(juegos);
-//});
 
 router.get('/:id', (req, res) => {
     const {id} = req.params;
@@ -44,21 +24,6 @@ router.get('/:id', (req, res) => {
 
     console.log(id);
 })
-
-//router.post('/json3', (req, res) => {
-//    const {title, version, genre} = req.body;
-//    if(title && version && genre) {
-//        const id = juegos.length +1;
-//        const nuevoJuego = {...req.body, id};
-//        juegos.push(nuevoJuego);
-//        //console.log(nuevoJuego);
-//        res.status(200).json(juegos);
-//    }else
-//    {
-//        res.status(500).json({error:'no data'});
-//    }
-//
-//});
 
 //RUTAS TÉCNICAS
 router.get('/api/registros/:id', (req, res) => {
@@ -316,8 +281,5 @@ router.get('/api/registros/filtros/ln/:locacion/:nombre', (req, res) => {
 
     res.json(arrpersonas);
 });
-
-
-
 
 module.exports = router;
