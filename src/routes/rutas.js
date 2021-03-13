@@ -25,18 +25,6 @@ router.get('/:id', (req, res) => {
     console.log(id);
 })
 
-//RUTAS TÉCNICAS
-router.get('/api/registros/:id', (req, res) => {
-    //res.send('Registros de API -> Elegido por ID');
-    const {id} = req.params;
-    personas.forEach(persona => {
-        if(persona.id == id){
-            res.json(persona);
-            console.log(persona.title);
-        }
-    });
-});
-
 //RUTAS PRINCIPALES
 router.post('/api/alta', (req, res) => {
     const {nombre, sexo, edades, ciudad, locacion} = req.body;
@@ -112,10 +100,10 @@ router.get('/api/registros/edades/:edades', (req, res) => {
         }
     });
 
-    
+    res.json(arrpersonas);
 });
 
-router.get('/api/registros/:locacion', (req, res) => {
+router.get('/api/registros/locacion/:locacion', (req, res) => {
     const {locacion} = req.params;
     let arrpersonas = [];
 
@@ -125,6 +113,8 @@ router.get('/api/registros/:locacion', (req, res) => {
             //console.log(persona.nombre);
         }
     });
+
+    res.json(arrpersonas);
 });
 
 //RUTAS FILTRADAS
@@ -161,7 +151,7 @@ router.get('/api/registros/filtros/ce/:ciudad/:edades', (req, res) => {
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.edades == edades);
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.edades == edades)
         {
             arrpersonas.push(persona);
         }
@@ -175,7 +165,7 @@ router.get('/api/registros/filtros/cln/:ciudad/:locacion/:nombre', (req, res) =>
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase())
         {
             arrpersonas.push(persona);
         }
@@ -185,11 +175,11 @@ router.get('/api/registros/filtros/cln/:ciudad/:locacion/:nombre', (req, res) =>
 });
 
 router.get('/api/registros/filtros/cle/:ciudad/:locacion/:edades', (req, res) => {
-    const {ciudad, locacion, nombre} = req.params;
+    const {ciudad, locacion, edades} = req.params;
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.edades == edades)
         {
             arrpersonas.push(persona);
         }
@@ -203,7 +193,7 @@ router.get('/api/registros/filtros/csn/:ciudad/:sexo/:nombre', (req, res) => {
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase())
         {
             arrpersonas.push(persona);
         }
@@ -213,11 +203,11 @@ router.get('/api/registros/filtros/csn/:ciudad/:sexo/:nombre', (req, res) => {
 });
 
 router.get('/api/registros/filtros/cse/:ciudad/:sexo/:edades', (req, res) => {
-    const {ciudad, locacion, nombre} = req.params;
+    const {ciudad, sexo, edades} = req.params;
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.edades.toLowerCase() == sexo.toLowerCase() && persona.edades == edades);
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase() && persona.edades == edades)
         {
             arrpersonas.push(persona);
         }
@@ -227,11 +217,11 @@ router.get('/api/registros/filtros/cse/:ciudad/:sexo/:edades', (req, res) => {
 });
 
 router.get('/api/registros/filtros/csen/:ciudad/:sexo/:edades/:nombre', (req, res) => {
-    const {ciudad, locacion, nombre} = req.params;
+    const {ciudad, sexo, edades, nombre} = req.params;
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        if(persona.ciudad.toLowerCase() == ciudad.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase() && persona.edades == edades && persona.nombre.toLowerCase() == nombre.toLowerCase())
         {
             arrpersonas.push(persona);
         }
@@ -245,7 +235,7 @@ router.get('/api/registros/filtros/le/:locacion/:edades', (req, res) => {
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.edades == edades);
+        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.edades == edades)
         {
             arrpersonas.push(persona);
         }
@@ -259,7 +249,7 @@ router.get('/api/registros/filtros/ls/:locacion/:sexo', (req, res) => {
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase());
+        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.sexo.toLowerCase() == sexo.toLowerCase())
         {
             arrpersonas.push(persona);
         }
@@ -273,13 +263,24 @@ router.get('/api/registros/filtros/ln/:locacion/:nombre', (req, res) => {
     let arrpersonas = [];
 
     personas.forEach(persona => {
-        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase());
+        if(persona.locacion.toLowerCase() == locacion.toLowerCase() && persona.nombre.toLowerCase() == nombre.toLowerCase())
         {
             arrpersonas.push(persona);
         }
     });
 
     res.json(arrpersonas);
+});
+
+router.get('/api/registros/:id', (req, res) => {
+    //res.send('Registros de API -> Elegido por ID');
+    const {id} = req.params;
+    personas.forEach(persona => {
+        if(persona.id == id){
+            res.json(persona);
+            console.log(persona.title);
+        }
+    });
 });
 
 module.exports = router;
