@@ -2,163 +2,19 @@
 
     {
         "id":"1",
-        "nombre":"Alfonso Cervantes Fuentes",
-        "sexo":"Masculino",
-        "edades":"21",
-        "ciudad":"Mexicali",
-        "locacion":"Toscana"
+        "title":"Keystation 49 MK3",
+        "brand":"M-Audio",
+        "category":"Keyboards",
+        "qty":"1",
+        "img":"keystation-mk3"
     },
     {
         "id":"2",
-        "nombre":"Ian Gerardo Coronado",
-        "sexo":"Masculino",
-        "edades":"20",
-        "ciudad":"Mexicali",
-        "locacion":"Casa Amaya"
-    },
-    {
-        "id":"3",
-        "nombre":"Arturo Durazo Simo",
-        "sexo":"Masculino",
-        "edades":"25",
-        "ciudad":"Mexicali",
-        "locacion":"San Agustin"
-    },
-    {
-        "id":"4",
-        "nombre":"Carlos Ortega Sanchez",
-        "sexo":"Masculino",
-        "edades":"36",
-        "ciudad":"Ensenada",
-        "locacion":"Abasolo"
-    },
-    {
-        "id":"5",
-        "nombre":"Ariadna Gomez Lopez",
-        "sexo":"Femenino",
-        "edades":"26",
-        "ciudad":"Tijuana",
-        "locacion":"Los Arboles"
-    },
-    {
-        "id":"6",
-        "nombre":"Lizbeth Tapia Carrillo",
-        "sexo":"Femenino",
-        "edades":"47",
-        "ciudad":"Guadalajara",
-        "locacion":"La perla"
-    },
-    {
-        "id":"7",
-        "nombre":"Jose Francisco Madariaga Fernandez",
-        "sexo":"Masculino",
-        "edades":"60",
-        "ciudad":"Tecate",
-        "locacion":"Chaparral"
-    },
-    {
-        "id":"8",
-        "nombre":"Rosa Rosario Feito",
-        "sexo":"Femenino",
-        "edades":"55",
-        "ciudad":"Hermosillo",
-        "locacion":"Miguel Aleman"
-    },
-    {
-        "id":"9",
-        "nombre":"Maria Cristina Ares Noguera",
-        "sexo":"Femenino",
-        "edades":"43",
-        "ciudad":"Saltillo",
-        "locacion":"Jardines"
-    },
-    {
-        "id":"10",
-        "nombre":"Adrian Lopez Gomez",
-        "sexo":"Masculino",
-        "edades":"19",
-        "ciudad":"Ciudad Valles",
-        "locacion":"Palma Sola"
-    },
-    {
-        "id":"11",
-        "nombre":"Jose Gandare Belmonte",
-        "sexo":"Masculino",
-        "edades":"25",
-        "ciudad":"Mexicali",
-        "locacion":"Toscana"
-    },
-    {
-        "id":"12",
-        "nombre":"Cristina Bernal Orellana",
-        "sexo":"Femenino",
-        "edades":"33",
-        "ciudad":"Tehuacan",
-        "locacion":"La Esperanza"
-    },
-    {
-        "id":"13",
-        "nombre":"Lorenzo Mejias Trujillo",
-        "sexo":"Masculino",
-        "edades":"67",
-        "ciudad":"Guadalajara",
-        "locacion":"Zapotlanejo"
-    },
-    {
-        "id":"14",
-        "nombre":"Carla Carnicero Lorenzo",
-        "sexo":"Femenino",
-        "edades":"78",
-        "ciudad":"Ciudad de Mexico",
-        "locacion":"Iztapalapa"
-    },
-    {
-        "id":"15",
-        "nombre":"Esteban Tamayo Torres",
-        "sexo":"Masculino",
-        "edades":"26",
-        "ciudad":"El Paso",
-        "locacion":"Obrera"
-    },
-    {
-        "id":"16",
-        "nombre":"Laurencia Galinez Dominguez",
-        "sexo":"Femenino",
-        "edades":"20",
-        "ciudad":"Mexicali",
-        "locacion":"Reforma"
-    },
-    {
-        "id":"17",
-        "nombre":"Angela Arzate Hendrix",
-        "sexo":"Femenino",
-        "edades":"26",
-        "ciudad":"Culiacan",
-        "locacion":"San Rafael"
-    },
-    {
-        "id":"18",
-        "nombre":"Victor Garza Gutierrez",
-        "sexo":"Masculino",
-        "edades":"21",
-        "ciudad":"Ensenada",
-        "locacion":"Carranza"
-    },
-    {
-        "id":"19",
-        "nombre":"Andrea Lopez Viramontes",
-        "sexo":"Femenino",
-        "edades":"44",
-        "ciudad":"Leon",
-        "locacion":"Andrade"
-    },
-    {
-        "id":"20",
-        "nombre":"Gloria Elsa Delgado Madero",
-        "sexo":"Femenino",
-        "edades":"89",
-        "ciudad":"Tijuana",
-        "locacion":"Lomas"
+        "title":"MPK Mini MK3",
+        "brand": "Akai",
+        "category":"Keyboards",
+        "qty":"1",
+        "img":"akai-mpk-mk3"
     }
    
 
