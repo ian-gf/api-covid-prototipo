@@ -1,5 +1,4 @@
 [
-
     {
         "id":"1",
         "title":"Keystation 49 MK3",
@@ -14,9 +13,71 @@
         "brand": "Akai",
         "category":"Keyboards",
         "qty":"1",
-        "img":"akai-mpk-mk3"
+        "img":"mpk-mk3"
+    },
+    {
+        "id":"3",
+        "title":"HD-600",
+        "brand": "Sennheiser",
+        "category":"Headphones",
+        "qty":"1",
+        "img":"hd-600"
+    },
+    {
+        "id":"4",
+        "title":"Maschine MK3",
+        "brand": "Native Instruments",
+        "category":"Controllers",
+        "qty":"1",
+        "img":"maschine-mk3"
+    },
+    {
+        "id":"5",
+        "title":"OP-1 Portable Synthesizer",
+        "brand": "Tennage Engineering",
+        "category":"Keyboards",
+        "qty":"1",
+        "img":"OP-1"
+    },
+    {
+        "id":"6",
+        "title":"TD-1DMK Drum Set",
+        "brand": "Roland V-Drums",
+        "category":"Electronic Drums",
+        "qty":"1",
+        "img":"TD-1DMK"
+    },
+    {
+        "id":"7",
+        "title":"TRAKTOR KONTROL S2 MK3",
+        "brand": "Native Instruments",
+        "category":"DJ Gear",
+        "qty":"1",
+        "img":"s2-mk3-dj"
+    },
+    {
+        "id":"8",
+        "title":"SA-46 Mini Keyboard",
+        "brand": "Casio",
+        "category":"Keyboards",
+        "qty":"1",
+        "img":"SA-46"
+    },
+    {
+        "id":"9",
+        "title":"SM58 DH Vocal Microphone",
+        "brand": "Shure",
+        "category":"Microphones",
+        "qty":"1",
+        "img":"SM58"
+    },
+    {
+        "id":"10",
+        "title":"Otamatone Original (Blue)",
+        "brand": "Otamatone",
+        "category":"Toys",
+        "qty":"1",
+        "img":"otamatone"
     }
-   
-
 
 ]

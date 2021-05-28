@@ -1,3 +1,4 @@
+require('./database');
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
@@ -13,8 +14,8 @@ app.use(express.json());
 app.use(cors());
 
 //rutas
-app.use(require('./routes/rutas'));
+app.use('/api/productos', require('./routes/rutas'));
 
 //Empezando el servidor
 app.listen(app.get('port'));
-console.log("El servidor está corriendo!");
+console.log("API Server - Running");
