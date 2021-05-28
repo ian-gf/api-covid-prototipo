@@ -1,0 +1,28 @@
+###
+GET http://localhost:3000/api/productos 
+
+###
+GET http://localhost:3000/api/productos/60b14bf316dc174ba09a3b36
+
+###
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+        "title":"SA-46 Mini Keyboard",
+        "brand": "Casio",
+        "category":"Keyboards",
+        "qty":"1",
+        "img":"SA-46"
+}
+
+###
+DELETE http://localhost:3000/api/productos/60b1510b2b91652e4461374e
+
+###
+PUT http://localhost:3000/api/productos/60b14fcedaa85539c84083fe
+Content-Type: application/json
+
+{
+    "qty": 1
+}
