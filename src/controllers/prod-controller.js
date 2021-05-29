@@ -47,7 +47,7 @@ productosCtrl.getServices = async (req, res) => {
 }
 
 productosCtrl.getSales = async (req, res) => {
-    const productos = await producto.find({sales: req.params.sales})
+    const productos = await producto.find({sale: req.params.sale})
     res.json(productos);
     //res.send({message: 'productos encontrados', productos})
 }

@@ -9,14 +9,15 @@ POST http://localhost:3000/api/productos
 Content-Type: application/json
 
 {
-        "title":"Otamatone Original (Blue)",
-        "brand": "Otamatone",
-        "category": "Toys",
-        "price": "39",
-        "img": "otamatone",
+        "title":"QuietComfort 35",
+        "brand": "Bose",
+        "category": "Headphones",
+        "price": "299",
+        "img": "bose-qc35",
         "sale": false,
         "service": false,
-        "recommended": true
+        "recommended": false,
+        "popular": true
 
 }
 
@@ -24,11 +25,11 @@ Content-Type: application/json
 DELETE http://localhost:3000/api/productos/60b151682b91652e44613754
 
 ###
-PUT http://localhost:3000/api/productos/60b29c3f51227637fc62d7c3
+PUT http://localhost:3000/api/productos/60b29ed351227637fc62d7cc
 Content-Type: application/json
 
 {
-    "popular": false
+    "title": "Otamatone Original"
 }
 
 ###
@@ -39,3 +40,6 @@ GET http://localhost:3000/api/productos/rec/true
 
 ###
 GET http://localhost:3000/api/productos/pop/true
+
+###
+GET http://localhost:3000/api/productos/sales/true

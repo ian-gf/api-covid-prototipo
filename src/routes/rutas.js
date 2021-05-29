@@ -18,7 +18,7 @@ router.get('/cat/:category', productosCtrl.getProductbyCategory);
 
 router.get('/rec/:recommended', productosCtrl.getRecommendedProducts);
 
-router.get('/sales/:sales', productosCtrl.getSales);
+router.get('/sales/:sale', productosCtrl.getSales);
 
 router.get('/services/:services', productosCtrl.getServices);
 
