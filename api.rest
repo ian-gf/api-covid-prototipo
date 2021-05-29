@@ -2,27 +2,40 @@
 GET http://localhost:3000/api/productos 
 
 ###
-GET http://localhost:3000/api/productos/60b14bf316dc174ba09a3b36
+GET http://localhost:3000/api/productos/60b29d1951227637fc62d7c6
 
 ###
 POST http://localhost:3000/api/productos
 Content-Type: application/json
 
 {
-        "title":"SA-46 Mini Keyboard",
-        "brand": "Casio",
-        "category":"Keyboards",
-        "qty":"1",
-        "img":"SA-46"
+        "title":"Otamatone Original (Blue)",
+        "brand": "Otamatone",
+        "category": "Toys",
+        "price": "39",
+        "img": "otamatone",
+        "sale": false,
+        "service": false,
+        "recommended": true
+
 }
 
 ###
-DELETE http://localhost:3000/api/productos/60b1510b2b91652e4461374e
+DELETE http://localhost:3000/api/productos/60b151682b91652e44613754
 
 ###
-PUT http://localhost:3000/api/productos/60b14fcedaa85539c84083fe
+PUT http://localhost:3000/api/productos/60b29c3f51227637fc62d7c3
 Content-Type: application/json
 
 {
-    "qty": 1
+    "popular": false
 }
+
+###
+GET http://localhost:3000/api/productos/cat/Keyboards
+
+###
+GET http://localhost:3000/api/productos/rec/true
+
+###
+GET http://localhost:3000/api/productos/pop/true

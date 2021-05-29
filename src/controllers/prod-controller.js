@@ -2,7 +2,7 @@ const productosCtrl = {}
 
 const producto = require('../models/productos.js');
 
-productosCtrl.getProducts = async (req, res) =>{
+productosCtrl.getProducts = async (req, res) => {
     const productos = await producto.find();
     res.json(productos);
 };
@@ -26,6 +26,36 @@ productosCtrl.deleteProduct = async (req, res) => {
 productosCtrl.updateProduct = async (req, res) => {
     const productoM = await producto.findByIdAndUpdate(req.params.id, req.body)
     res.send({message: 'producto modificado', productoM})
+}
+
+productosCtrl.getProductbyCategory = async (req, res) => {
+    const productos = await producto.find({category: req.params.category})
+    res.json(productos);
+    //res.send({message: 'productos encontrados', productos})
+}
+
+productosCtrl.getRecommendedProducts = async (req, res) => {
+    const productos = await producto.find({recommended: req.params.recommended})
+    res.json(productos);
+    //res.send({message: 'productos encontrados', productos})
+}
+
+productosCtrl.getServices = async (req, res) => {
+    const productos = await producto.find({services: req.params.services})
+    res.json(productos);
+    //res.send({message: 'productos encontrados', productos})
+}
+
+productosCtrl.getSales = async (req, res) => {
+    const productos = await producto.find({sales: req.params.sales})
+    res.json(productos);
+    //res.send({message: 'productos encontrados', productos})
+}
+
+productosCtrl.getPopular = async (req, res) => {
+    const productos = await producto.find({popular: req.params.popular})
+    res.json(productos);
+    //res.send({message: 'productos encontrados', productos})
 }
 
 module.exports = productosCtrl;

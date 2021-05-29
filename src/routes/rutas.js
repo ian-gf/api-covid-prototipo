@@ -14,4 +14,14 @@ router.put('/:id', productosCtrl.updateProduct);
 
 router.post('/', productosCtrl.createProduct);
 
+router.get('/cat/:category', productosCtrl.getProductbyCategory);
+
+router.get('/rec/:recommended', productosCtrl.getRecommendedProducts);
+
+router.get('/sales/:sales', productosCtrl.getSales);
+
+router.get('/services/:services', productosCtrl.getServices);
+
+router.get('/pop/:popular', productosCtrl.getPopular);
+
 module.exports = router;
